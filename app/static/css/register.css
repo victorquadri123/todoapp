@@ -1,0 +1,42 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.form{
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+
+}
+input[type="text"], input[type="email"], input[type= "password"]{
+    width: 100%;
+    padding: 10px;
+    margin-left: -10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+.input-group{
+    position: relative;
+
+}
+input[type="submit"]{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

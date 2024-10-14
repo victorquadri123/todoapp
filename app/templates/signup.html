@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/register.css'  %}">
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form" method="post">
+            {% csrf_token %}
+
+            <h2>REGISTER</h2>
+
+            <input type="text" name="username" placeholder="username" required>
+            {% if form.username.errors %} 
+                {% for error in form.username.errors %}
+                {% endfor %}
+                <div>{{error}}</div>
+            {% endif %}
+            <input type="email" name="email" placeholder="email" required>
+            {% if form.email.errors %} 
+                {% for error in form.email.errors %}
+                {% endfor %}
+                <div>{{error}}</div>
+            {% endif %}
+            <input type="password" name="password1" placeholder="password" required>
+            {% if form.password1.errors %} 
+                {% for error in form.password1.errors %}
+                {% endfor %}
+                <div>{{error}}</div>
+            {% endif %}
+            <input type="password" name="password2" placeholder="comfirm password" required>
+            {% if form.password2.errors %} 
+                {% for error in form.password2.errors %}
+                {% endfor %}
+                <div>{{error}}</div>
+            {% endif %}
+            <input type="submit" value="signup">
+
+            <p>already have an acount? <a href="{% url 'app:signin'  %}">signin</a></p>
+            {% if messages %} 
+                {% for message in messages %}
+                {% endfor %}
+                <div>{{message}}</div>
+            {% endif %}
+
+           
+        </form>
+
+    </div>
+</body>
+</html>

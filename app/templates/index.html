@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'  %}">
+</head>
+<body>
+    {% include: "base.html" %}
+    <div class="container">
+        <div class="header">
+            <h1>Create a Task</h1>
+        </div>
+        <div class="section">
+            <h2>Task Title</h2>
+            <input type="text" name="task title" required>
+            <h2>Task Description</h2>
+            <input type="text" name="task Description"  class="des" required>
+            <h2>Due Date</h2>
+            <input type="date" name="due date" id="">
+            <h2>Due Time</h2>
+            <input type="time" name="" id="">
+
+            
+        </div>
+        <div class=imp>
+            <label for="">important:</label>
+            <input type="checkbox" name="" id="">
+        </div>
+       
+
+        <input type="submit" value="Submit" class="submit">
+
+    </div>
+
+</body>
+</html>
