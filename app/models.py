@@ -10,7 +10,7 @@ class Todo(models.Model):
     DueDate = models.DateTimeField(db_column= "duedate")
     CompletedDate = models.DateTimeField(null=True, blank=True)
     CreatedDate = models.DateTimeField(default= timezone.now)
-    Improtant = models.BooleanField(default=False)
+    Important = models.BooleanField(default=False)
     Status = models.CharField(max_length= 50, default="pending")
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 

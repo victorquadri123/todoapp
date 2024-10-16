@@ -17,34 +17,39 @@
             <input type="text" name="username" placeholder="username" required>
             {% if form.username.errors %} 
                 {% for error in form.username.errors %}
+                    <div>{{error}}</div>
                 {% endfor %}
-                <div>{{error}}</div>
+               
             {% endif %}
             <input type="email" name="email" placeholder="email" required>
             {% if form.email.errors %} 
                 {% for error in form.email.errors %}
+                    <div>{{error}}</div>
                 {% endfor %}
-                <div>{{error}}</div>
+                
             {% endif %}
             <input type="password" name="password1" placeholder="password" required>
             {% if form.password1.errors %} 
                 {% for error in form.password1.errors %}
+                    <div>{{error}}</div>
                 {% endfor %}
-                <div>{{error}}</div>
+                
             {% endif %}
             <input type="password" name="password2" placeholder="comfirm password" required>
             {% if form.password2.errors %} 
                 {% for error in form.password2.errors %}
+                   <div>{{error}}</div>
                 {% endfor %}
-                <div>{{error}}</div>
+                
             {% endif %}
             <input type="submit" value="signup">
 
             <p>already have an acount? <a href="{% url 'app:signin'  %}">signin</a></p>
             {% if messages %} 
                 {% for message in messages %}
+                   <div>{{message}}</div>
                 {% endfor %}
-                <div>{{message}}</div>
+                
             {% endif %}
 
            

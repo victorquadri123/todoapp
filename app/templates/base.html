@@ -16,7 +16,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'app:home' %}">Home</a>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
@@ -38,6 +38,7 @@
             </ul>
             <form class="d-flex">
               <a href="{% url 'app:register' %}" class="nav-link">signin</a>
+              <a href="{% url 'app:logout' %}" class="nav-link'">logout</a>
             </form>
           </div>
         </div>
